@@ -1,0 +1,22 @@
+* {
+    margin:0;
+}
+
+#map{
+    height:300px;
+    width:300px;
+}
+
+#chart{
+    height:300px;
+    width:300px;
+}
+
+.active{
+    border:1px solid black;
+}
+
+#sideTable .body{
+    height:200px;
+    overflow: auto;
+}

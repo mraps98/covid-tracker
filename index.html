@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Covid Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Covid19 Tracker</h1>
+
+        <div id="areaSelector">
+            <select name="area" id="area">
+                <option value="Worldwide">Worldwide</option>
+            </select>
+        </div>
+
+        <div id="tabMenu">
+            <div class="cases">
+                <label>Cases</label>
+                <label class="today"></label><label>Today</label>
+                <label class="total"></label><label>Total</label>
+            </div>
+            <div class="recovered">
+                <label>Recovered</label>
+                <label class="today"></label><label>Today</label>
+                <label class="total"></label><label>Total</label>
+            </div>
+            <div class="deaths">
+                <label>Deaths</label>
+                <label class="today"></label>Today
+                <label class="total"></label>Total
+            </div>
+        </div>
+
+        <div id="sideTable">
+            <div class="header">
+                <h2>Countries</h2>
+            </div>
+            <div class="body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Country</th>
+                            <th>Cases</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div id="sideChart">
+            <div class="header">
+                <h2><span id="areaSelected">Worldwide</span> New <span id="typeSelected">cases</span></h2>
+            </div>
+            <div class="body">
+                <canvas id="chart">
+                    
+                </canvas>
+            </div>
+        </div>
+
+        <div id="map"></div>
+
+    </div>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1TSD99QzDedc7cK8QSMyqMHS4hcRRMLg&callback=initMap&libraries=&v=weekly"
+        defer
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js" integrity="sha512-G8JE1Xbr0egZE5gNGyUm1fF764iHVfRXshIoUWCTPAbKkkItp/6qal5YAHXrxEu4HNfPTQs6HOu3D5vCGS1j3w==" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
