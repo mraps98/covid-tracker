@@ -1,22 +1,116 @@
+/* root */
 * {
     margin:0;
+    cursor:inherit;
+}
+body{
+    background-color: rgba(200,200,200, 0.1);
 }
 
+body h1{
+    text-align:center;
+}
+.container{
+    width:100%;
+    max-width:1300px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.container>div{
+    display:flex;
+}
+
+.card{
+    transition-duration:0.5s;
+    background-color: #fff;
+    box-shadow: 3px 3px 2px #000;
+    padding: 1.6%;
+}
+
+/* selector */
+#areaSelector{
+    justify-content: flex-end;
+    flex:1;
+    margin-bottom: 2%;
+}
+#areaSelector select{
+    height:50px;
+    cursor:pointer;
+}
+select:hover{
+    background-color:#eee;
+}
+option{
+    cursor:pointer;
+}
+
+/* tabMenu */
+.active{
+    border:1px solid black;
+    background-color:#bbb;
+}
+#tabMenu{
+    justify-content: center;
+}
+#tabMenu > div{
+    flex:1;
+    cursor:pointer;
+    border-radius:5px;
+}
+#tabMenu>div:hover{
+    background-color:#aaa;
+    transition-duration:0.5s;
+}
+#tabMenu > div label:nth-child(1){
+    font-size:1.5rem;
+    font-weight:bold;
+}
+#tabMenu > div:not(:last-of-type){
+    margin-right: 2%;
+}
+
+/* main */
+#main{
+    margin-top:2%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+/* map */
+#mainLeft{
+    flex:0.9;
+    background-color:#fff;
+}
 #map{
-    height:300px;
-    width:300px;
+    height:600px;
+    width:100%;
 }
-
+/* sideTable */
+#sideTable .body{
+    height:200px;
+    overflow: auto;
+}
+tbody tr{
+    color:#111;
+}
+td{
+    padding:1.2%;
+}
+tbody tr:nth-of-type(odd){
+    background-color:#eee;
+}
+/* chart */
+#sideChart{
+    margin-top:4%;
+}
 #chart{
     height:300px;
     width:300px;
 }
 
-.active{
-    border:1px solid black;
-}
-
-#sideTable .body{
-    height:200px;
-    overflow: auto;
+@media (max-width: 800px){
+    #main{
+        display:block;
+    }
 }

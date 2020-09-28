@@ -17,56 +17,58 @@
         </div>
 
         <div id="tabMenu">
-            <div class="cases">
-                <label>Cases</label>
-                <label class="today"></label><label>Today</label>
-                <label class="total"></label><label>Total</label>
+            <div class="cases card">
+                <label>Cases</label><br/>
+                <label class="today"></label> <label>Today</label><br/>
+                <label class="total"></label> <label>Total</label>
             </div>
-            <div class="recovered">
-                <label>Recovered</label>
-                <label class="today"></label><label>Today</label>
-                <label class="total"></label><label>Total</label>
+            <div class="recovered card">
+                <label>Recovered</label><br/>
+                <label class="today"></label> <label>Today</label><br/>
+                <label class="total"></label> <label>Total</label>
             </div>
-            <div class="deaths">
-                <label>Deaths</label>
-                <label class="today"></label>Today
-                <label class="total"></label>Total
-            </div>
-        </div>
-
-        <div id="sideTable">
-            <div class="header">
-                <h2>Countries</h2>
-            </div>
-            <div class="body">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Country</th>
-                            <th>Cases</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
+            <div class="deaths card">
+                <label>Deaths</label><br/>
+                <label class="today"> </label>Today<br/>
+                <label class="total"> </label>Total
             </div>
         </div>
 
-
-        <div id="sideChart">
-            <div class="header">
-                <h2><span id="areaSelected">Worldwide</span> New <span id="typeSelected">cases</span></h2>
+        <div id="main">
+            <div id="mainLeft" class="card">
+                <div id="map"></div>
             </div>
-            <div class="body">
-                <canvas id="chart">
-                    
-                </canvas>
+            <div id="mainRight" class="card">
+                <div id="sideTable">
+                    <div class="header">
+                        <h2>Countries</h2>
+                    </div>
+                    <div class="body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Cases</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="sideChart">
+                    <div class="header">
+                        <h2><span id="areaSelected">Worldwide</span> New <span id="typeSelected">cases</span></h2>
+                    </div>
+                    <div class="body">
+                        <canvas id="chart"></canvas>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div id="map"></div>
-
+        
+        
     </div>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script

@@ -247,7 +247,7 @@ const updateMapCircles = (type="cases") => {
             })
             mapCircles.push(circle);
             const infoWindow = new google.maps.InfoWindow({
-                content: `<h2>${c.country}</h2><label>${c.cases} Cases</label><label>${c.deaths} Deaths</label><label>${c.recovered} Recovered</label>`
+                content: `<h2>${c.country}</h2><label>${c.cases} Cases</label><br/><label>${c.deaths} Deaths</label><br/><label>${c.recovered} Recovered</label>`
             })
 
             circle.addListener("click", () =>{
